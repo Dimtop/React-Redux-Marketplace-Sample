@@ -1,0 +1,128 @@
+body{
+
+
+   background-color: whitesmoke;
+   
+}
+
+#appContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+#drawerContainer{
+    width: 10vw;
+
+    height: 100vh;
+}
+
+#headerBarContainer{
+    margin: 1em;
+}
+
+#appBarContentContainer{
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+}
+
+#accountButtonsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#mainContentContainer{
+    height: 100vh;
+}
+
+#adsContainer{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-gap: 1em;
+    margin: 1em;
+}
+
+
+#userInfoContainer{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin: 1em;
+    grid-gap: 1em;
+
+
+}
+
+#userInfo{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin:0!important;
+}
+
+
+#userMessages{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin:0!important;
+}
+
+#userAds{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin:0!important;
+}
+
+input[type=text]:not(.browser-default){
+
+}
+
+.inputNoMargin{
+    margin:0!important;
+}
+
+.file-path-wrapper{
+    padding: 0!important;
+}
+
+
+#loginScreenContainer{
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    column-gap: 1em;
+    height: 100vh;
+}
+
+#loginForm{
+ grid-column: 2;
+ grid-row: 2;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 992px) {
+    #adsContainer{
+        grid-template-columns: 6fr 6fr; 
+    }
+
+    #userInfoContainer{
+        grid-template-columns: 6fr 6fr; 
+    }
+
+    #loginScreenContainer{
+        grid-template-columns: 1fr 4fr 1fr; 
+    }
+  }
+
+@media screen and (max-width: 600px) {
+
+    #adsContainer{
+        grid-template-columns: 12fr; 
+    }
+
+    #userInfoContainer{
+        grid-template-columns: 1fr; 
+    }
+    #loginScreenContainer{
+        grid-template-columns: 1fr 6fr 1fr; 
+    }
+}    
