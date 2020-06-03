@@ -13,7 +13,28 @@ class UserInfoScreen extends Component{
     }
 
 
+    componentWillMount(){
 
+        var email = document.cookie.split('; ').find(row => row.startsWith('email')).split('=')[1].replace('%40','@');
+        console.log(email);
+        fetch('/api/users?email=' + email, {
+            method: 'GET',
+            mode:'cors',
+            headers: {
+                'Content-Type': 'application/json'
+              }
+        })
+        .then( res => res.json())
+        .then(data =>{
+            console.log(data);
+            if(data.error == ''){
+                console.log('User: ' + data.user);
+            }
+            else{
+                console.log(data.error);
+            }
+        })
+    }
 
     render(){
         return(

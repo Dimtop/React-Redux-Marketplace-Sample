@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 const authMiddleware = require('./middlewares/auth.js');
 const checkLoginMiddleware = require('./middlewares/checkLogin.js');
+const userInfoMiddleware = require('./middlewares/userInfoMiddleware');
 const express = require('express');
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(cookieParser());
 app.post('/api/login', authMiddleware);
 app.get('/api/login', checkLoginMiddleware);
 
-
+app.get('/api/users', userInfoMiddleware);
 
 app.listen(5000, (err)=>{
     if(err){
